@@ -150,37 +150,44 @@ namespace Assignment2_DIS_Spring2021
         {
             try
             {
-                int count = 0;
+                if(ar2.Length == 0)
+                {
+                    int count = 0;
 
-                //iterates over the array for each elements in it
-                for (int i = 0; i <= ar2.Length - 1; i++)
-                  {
-                    //condition to check if element is not equal to zero
-                    if(ar2[i]!=0)
-                       {
-                        //reassigning the values to the array if the element is not zero
-                         ar2[count] = ar2[i];
-                             count++;
+                     //iterates over the array for each elements in it
+                     for (int i = 0; i <= ar2.Length - 1; i++)
+                     {
+                         //condition to check if element is not equal to zero
+                         if(ar2[i]!=0)
+                            {
+                             //reassigning the values to the array if the element is not zero
+                              ar2[count] = ar2[i];
+                               count++;
+
+                             }
 
                        }
+                       for (int j=ar2.Length-1;j>=count;j--)//iterates of the array in decremental order
+                       {
+                           ar2[j] = 0;
+                        }
 
-                     }
-                    for (int j=ar2.Length-1;j>=count;j--)//iterates of the array in decremental order
-                    {
-                       ar2[j] = 0;
-                    }
-
-                     foreach (object each in ar2)
-                     {
-                    //iterates over the array to return each elements 
-                       Console.Write(each);
-                     }
+                         foreach (object each in ar2)
+                         {
+                          //iterates over the array to return each elements 
+                            Console.Write(each);
+                         }
+                }
+                else
+                {
+                    throw new Exception();
+                }
                 
             }
             catch (Exception)
             {
 
-                throw;
+                Console.WriteLine("please enter valid inputs");
             }
         }
 
