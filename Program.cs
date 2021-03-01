@@ -285,6 +285,10 @@ namespace Assignment2_DIS_Spring2021
                         }
                     }
                 }
+                else
+                {
+                    throw new Exception();
+                }
 
             }
             catch (Exception)
